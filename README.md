@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+#Grand ole' Game List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+### Install instructions
+- npm install
+- npm run start
+---------------
+## Future Features
+### Search feature
+Create a function that concats publisher and game name together and pushes it to searchFields object with {concatString: '', id: ''} and use filter to search searchFields.fiter((field) => field.concatString.contains(input)).
+### Edit Feature
+Create an Edit button by each game list item that loads that record into the fields of the Entry Form. After changing the fields and pressing the submit button, the function will find the game id in games array and update the field
 
-### `npm start`
+### Persistent Storage
+For proof of concept, I would use Local Storage. I would create an if statement that checks if there is Local storage using localStorage?.getItem('games'). If there is none, it will set local storage using localStorage.setItem('games', games). When a new entry is added, it will add the new entry to state using setGames(games.concat({newGameEntry})).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I will eventually upgrade this to a mySQL database with the same id, publisher, name, nickame, and rating schema.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
+I will create a back end to enter and retrieve records from the database using Get, Post and Put calls.
 
-### `npm test`
+## Project ideas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Component Structure
+There are two main UI parts: Games List and Entry Form. The Entry Form is used in two different places.
 
-### `npm run build`
+### Linting
+I add linting to every project because that will keep my code uniform and catch errors. I choose Airbnb's eslint-config-airbnb for small projects because it will enforce an abundance of good practices without having to select each one. Saving automatically formats my code. For larger or more long term projects, I hand select linting rules that support it's long term goals and make my day to day life easier.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### NPM Dependencies
+- **Tailwindcss** is a CSS framework that allows making simple css quickly.
+- **Mantine.dev** is a React component library that makes adding the Accordion and adding functionality very fast.
+- **eslint-config-airbnb** adding best linting practices functionality with a quick install.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Wireframe
+[Game List Wireframe](https://www.figma.com/file/BTLVnni09C9DPcNyxWbAQZ/Games-List?node-id=0%3A1). I chose to make a simple black and white theme because I love the UI of Robinhood over Fidelity.com's trading platform. That style with a splash of color seems to be the "smart money". I left it without extra color or flourishes because while creating a good basic layout in black and white is fast adding color and other element that improve (and do not detract) it requires time and design acumen.
+The design is also mobile responsive. The Entry Form folds into an Accordion element in mobile view.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Font
+I selected Abeezee because it is a clean san-sarif that is not commonly used. Meaning, it will not look like every other site.
